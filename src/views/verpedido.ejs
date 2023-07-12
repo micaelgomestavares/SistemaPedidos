@@ -1,0 +1,91 @@
+<%- include('partials/header.ejs') %>
+
+<body>
+  <%- include('partials/navbar.ejs') %> <% if (pedidoVer === 'idinvalido' ) { %>
+
+  <div
+    style="
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: red;
+      margin-top: 20%;
+    "
+  >
+    <h1>ID não existente no banco de dados =(</h1>
+  </div>
+
+  <% } else{ %>
+
+  <section class="secao">
+    <div id="divImprimir" class="verpedido">
+      <br />
+      <b>Classic Pizza</b><br />
+      <br />
+
+      <b>Pedido ID:</b>
+      <%= pedidoVer.id %>
+      <br />
+
+      <b>Data:</b>
+      <%= pedidoVer.data %>
+      <br />
+
+      <%= pedidoVer.horario %> -----------------------------
+
+      <br />Dados do Cliente<br />
+
+      <br /><b>Nome:</b>
+      <%= pedidoVer.nome %>
+      <br /><b>Telefone:</b> <%= pedidoVer.telefone %><br />
+      <br /><b>Endereço:</b>
+      <%= pedidoVer.endereco %>
+      <br /><b>Número:</b>
+      <%= pedidoVer.numerodacasa %>
+      <br />-----------------------------
+
+      <br /><b>Resumo Do Pedido:</b>
+      <br />
+
+      <% arrayPizzas.forEach((item,index) => { %> <%= item %> <br />
+      <% }) %>
+      <br />
+
+      <b>Tipo de Pizza:</b> <br />
+      <%= pedidoVer.tipodepizza %>
+
+      <br />----------------------------- <br />
+      <b>Forma De Pagamento:</b> <%= pedidoVer.formadepagamento %> <br />
+      <b>Taxa:</b> <%= pedidoVer.taxa %> <br /><br />
+      <b>Total:</b> <%= pedidoVer.valortotal %>
+
+      <br />-----------------------------
+      <br />
+      <br />***OBRIGADO E BOM APETITE***
+      <br />
+    </div>
+  </section>
+
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    "
+  >
+    <button class="bn54 purple" id="printdiv" style="height: 50px !important; width: 200px !important; ">
+      <span class="bn54span"><i class='bx bxs-printer'></i></span>
+    </button>
+    <form action="/editarpedido/<%= pedidoVer.id %>">
+      <button class="bn54 yellow">
+        <span class="bn54span"><i class='bx bxs-pencil'></i></span>
+      </button>
+    </form>
+  </div>
+
+  <% } %>
+</body>
+
+<%- include('partials/footer.ejs') %>

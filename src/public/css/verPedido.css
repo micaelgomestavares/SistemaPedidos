@@ -1,0 +1,45 @@
+.secao {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.verpedido {
+  background-color: #fdfbe3;
+  color: black;
+  width: 80mm;
+  font-family: monospace;
+  font-size: 11pt;
+  padding-bottom: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-break: break-all;
+}
+
+.btimprimir {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  font-weight: 500;
+  background-color: #6658d3;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+}
+
+.btimprimir:focus {
+  outline: 0;
+}
+
+.btimprimir:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=verPedido.css.map */

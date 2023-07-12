@@ -1,0 +1,309 @@
+:root {
+  --bg-color: #171717;
+  --text-color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: var(--bg-color);
+  z-index: 100;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .logo-details {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar .logo-details img {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.sidebar .logo-details #inv {
+  display: none;
+}
+
+.sidebar .logo-details .changemode {
+  color: var(--text-color);
+}
+
+.sidebar .logo-details .changemode:hover {
+  cursor: pointer;
+}
+
+.sidebar .nav-links {
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  margin: 15px 30px 15px 30px;
+}
+
+.sidebar .nav-links li:hover {
+  background: #ffffff;
+  color: black !important;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sidebar .nav-links li:hover i {
+  color: black;
+}
+
+.sidebar .nav-links li:hover .link_name {
+  color: black !important;
+}
+
+.sidebar .nav-links li .icon-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: var(--text-color);
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-color);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+  display: none;
+}
+
+.sidebar .nav-links li .sub-menu a {
+  color: var(--text-color);
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+  opacity: 1;
+}
+
+.sidebar .nav-links li .sub-menu .link_name {
+  display: none;
+}
+
+.sidebar .nav-links li .sub-menu.blank {
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li.showMenu i.arrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.sidebar .nav-links li.showMenu .sub-menu {
+  display: block;
+}
+
+.sidebar .profile-details {
+  position: fixed;
+  bottom: 0;
+  width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #171717;
+  padding: 12px 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile-details .profile-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .profile-details img {
+  height: 52px;
+  width: 52px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  background: #171717;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile-details .profile_name {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sidebar .profile-details .job {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.bx-log-out {
+  text-align: initial;
+  margin-left: 10px;
+}
+
+.inv {
+  display: none;
+}
+
+@media (max-width: 1366px) {
+  .sidebar {
+    width: 78px;
+  }
+  .sidebar .logo-details .logo_name {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .sidebar .nav-links {
+    overflow: visible;
+  }
+  .sidebar .nav-links li {
+    margin-left: 0;
+  }
+  .sidebar .nav-links li .icon-link {
+    display: block;
+  }
+  .sidebar .nav-links li a .link_name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .sidebar .nav-links li .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+  .sidebar .nav-links li .sub-menu .link_name {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+  }
+  .sidebar .nav-links li:hover .sub-menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .sidebar .nav-links i.arrow {
+    display: none;
+  }
+  .sidebar .profile-details {
+    background: none;
+    width: 78px;
+  }
+  .sidebar .profile-details img {
+    padding: 10px;
+  }
+  .sidebar .profile-details i {
+    display: none;
+  }
+  .sidebar .profile-details .profile_name {
+    display: none;
+  }
+  .sidebar .profile-details .job {
+    display: none;
+  }
+  .sidebar ~ .home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
+  .sidebar .nav-links li .sub-menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

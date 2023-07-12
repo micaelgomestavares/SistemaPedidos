@@ -1,0 +1,107 @@
+<%- include('partials/header.ejs') -%>
+
+  <body>
+    <%- include('partials/navbar.ejs') %>
+
+      <% if (pedidoVer==='idinvalido' ){%>
+
+        <div style="
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: red;
+          margin-top: 20%;
+        ">
+          <h1>ID não existente no banco de dados =(</h1>
+        </div>
+        <%}else{%>
+
+          <div class="container">
+            <div class="card" id="cardimprimir">
+
+
+              <form class="card-form" method="POST" action="/editarpedido/insert" autocomplete="nope">
+
+                <div class="input">
+                  <input type="text" name="_id" class="input-field" autocomplete="nope" value="<%= pedidoVer.id %>"
+                    required readonly />
+                </div>
+
+                <div class="input">
+                  <input type="text" name="_nome" class="input-field" autocomplete="nope" value="<%= pedidoVer.nome %>"
+                    required />
+                  <label class=" input-label"><i class="fas fa-user"></i> Nome</label>
+                </div>
+
+                <div class="input">
+                  <textarea type="text" name="_endereco" class="input-field" rows="4" autocomplete="nope"
+                    required><%= pedidoVer.endereco %></textarea>
+                  <label class="input-label"><i class="fas fa-road"></i> Endereço</label>
+                </div>
+
+                <div class="input">
+                  <input type="text" name="_numerodacasa" class="input-field" autocomplete="nope"
+                    value="<%= pedidoVer.numerodacasa %>" required />
+                  <label class="input-label"><i class="fas fa-home"></i> Número Da Casa</label>
+                </div>
+
+                <div class="input">
+                  <input type="text" name="_taxa" class="valorreal input-field" autocomplete="nope"
+                    value="<%= pedidoVer.taxa %>" required />
+                  <label class="input-label"><i class="fas fa-money-bill"></i> Taxa</label>
+                </div>
+
+                <div class="input">
+                  <input type="tel" name="_telefone" class="input-field" autocomplete="off"
+                    value="<%= pedidoVer.telefone %>" required />
+                  <label class="input-label"><i class="fas fa-mobile-alt"></i> Telefone</label>
+                </div>
+
+                <div class="input">
+                  <textarea class="input-field" name="_pedido" rows="5" autocomplete="nope"
+                    required><% for(var i=0; i<arrayPizzas.length; i++) { %><%= arrayPizzas[i] %>,<% } %></textarea>
+                  <label class="input-label"> <i class="fas fa-shopping-basket"></i> Pedido</label>
+                </div>
+
+                <div class="input">
+                  <select class="input-field" name="_tipodepizza" aria-valuenow="<%= pedidoVer.tipodepizza %>">
+                    <option>Pré Assada</option>
+                    <option>Assada</option>
+                    <option>Pré + Assada</option>
+                  </select>
+                  <label class="input-label"><i class="fas fa-pizza-slice"></i> Tipo de pizza</label>
+                </div>
+
+                <div class="input">
+                  <input type="text" name="_valortotal" class="valorreal input-field"
+                    value="<%= pedidoVer.valortotal %>" required />
+                  <label class="input-label"><i class="fas fa-money-bill"></i> Valor total</label>
+                </div>
+
+                <div class="input">
+                  <input type="text" name="_formadepagamento" class="input-field" autocomplete="off"
+                    value="<%= pedidoVer.formadepagamento %>" required />
+                  <label class="input-label"><i class="fas fa-credit-card"></i> Forma de Pagamento</label>
+                </div>
+
+                <div class="input" style="display: none !important;">
+                  <input type="text" id="data" name="_data" autocomplete="off" />
+                </div>
+
+                <div class="action" style="display: flex; justify-content: center;">
+                  <button class="action-button no-print bn54 yellow"
+                    style="height: 50px !important; width: 350px !important; align-items: center; justify-content: center;">
+                    <span class="bn54span">Editar Pedido</span>
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+          <% } %>
+  </body>
+
+  <%- include('partials/footer.ejs') -%>
+    <script src="/js/display.js"></script>

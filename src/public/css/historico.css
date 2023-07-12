@@ -1,0 +1,273 @@
+body {
+  background: #191a19;
+}
+
+#Search {
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 0.3rem;
+  border: none;
+  width: 15%;
+}
+
+.historic-section {
+  margin-left: 280px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.historic-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  display: block;
+  position: relative;
+  min-height: 380px;
+  text-align: left;
+  line-height: 1.3;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 15px;
+  margin: 1rem 1rem 10px 1rem;
+  -webkit-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.1);
+  background: #303030;
+}
+
+.historic-content p {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  position: relative;
+  padding: 2px;
+}
+
+.historic-content h1 {
+  color: white;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  margin-top: 30px;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.bn54 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-left: 5px;
+  height: 45px;
+  width: 65px;
+  outline: none;
+  text-decoration: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.bn54:hover {
+  -webkit-animation: bn54rotate 0.7s ease-in-out both;
+          animation: bn54rotate 0.7s ease-in-out both;
+}
+
+.bn54:hover .bn54span {
+  -webkit-animation: bn54storm 0.7s ease-in-out both;
+          animation: bn54storm 0.7s ease-in-out both;
+  -webkit-animation-delay: 0.06s;
+          animation-delay: 0.06s;
+}
+
+.bn54 .bn54span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.blue {
+  background-color: #4285f4;
+}
+
+.blue:hover {
+  background-color: transparent;
+  border: solid 1px #4285f4;
+}
+
+.blue:hover i {
+  color: #4285f4;
+}
+
+.red {
+  background-color: #ff3547;
+}
+
+.red:hover {
+  background-color: transparent;
+  border: solid 1px #ff3547;
+}
+
+.red:hover i {
+  color: #ff3547;
+}
+
+.yellow {
+  background-color: #f0d264;
+}
+
+.yellow:hover {
+  background-color: transparent;
+  border: solid 1px #f0d264;
+}
+
+.yellow:hover i {
+  color: #f0d264;
+}
+
+.purple {
+  background-color: #6658d3;
+}
+
+.purple:hover {
+  background-color: transparent;
+  border: solid 1px #6658d3;
+}
+
+.purple:hover i {
+  color: #6658d3;
+}
+
+@-webkit-keyframes bn54rotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+            transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
+            transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
+            transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    -webkit-transform: rotate(1deg) translate3d(0, 0, 0);
+            transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+            transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bn54rotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+            transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
+            transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
+            transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    -webkit-transform: rotate(1deg) translate3d(0, 0, 0);
+            transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+            transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes bn54storm {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) translateZ(0);
+            transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    -webkit-transform: translate3d(4px, 0, 0) translateZ(0);
+            transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    -webkit-transform: translate3d(-3px, 0, 0) translateZ(0);
+            transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    -webkit-transform: translate3d(2px, 0, 0) translateZ(0);
+            transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) translateZ(0);
+            transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@keyframes bn54storm {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) translateZ(0);
+            transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    -webkit-transform: translate3d(4px, 0, 0) translateZ(0);
+            transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    -webkit-transform: translate3d(-3px, 0, 0) translateZ(0);
+            transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    -webkit-transform: translate3d(2px, 0, 0) translateZ(0);
+            transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) translateZ(0);
+            transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@media (max-width: 1366px) {
+  .historic-section {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 360px) {
+  .historic-content {
+    margin: 0 0 10px 0;
+  }
+}
+/*# sourceMappingURL=historico.css.map */

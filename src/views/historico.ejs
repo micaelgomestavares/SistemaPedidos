@@ -1,0 +1,73 @@
+<%- include('partials/header.ejs') %>
+
+  <body>
+    <%- include('partials/navbar.ejs') %>
+
+      <section class="searchEngine">
+        <input type="text" id="Search" onkeyup="searchHistoric()" placeholder="Procurar pedido"
+          title="Procure um pedido">
+      </section>
+
+      <section class="historic-section">
+        <% pedidos.forEach((pedido)=> { %>
+          <div class="historic-content target">
+
+            <p>
+              <b>Nome:</b>
+              <%= pedido.nome %>
+            </p>
+
+            <p>
+              <b>Endereço:</b>
+              <%= pedido.endereco %>
+            </p>
+
+            <p>
+              <b>Telefone:</b>
+              <%= pedido.telefone %>
+            </p>
+            <br>
+            <p>
+              <b>Taxa:</b>
+              <%= pedido.taxa %>
+            </p>
+
+            <p>
+              <b>Total:</b>
+              <%= pedido.valortotal %>
+            </p>
+
+            <h1>
+              <%= pedido.data %><br>
+                ID: <%= pedido.id %>
+            </h1>
+
+            <div class="buttons">
+              <form action="/verpedido/<%= pedido.id %>">
+                <button class="bn54 blue">
+                  <span class="bn54span"><i class="fas fa-eye"></i></span>
+                </button>
+              </form>
+
+              <form action="/editarpedido/<%= pedido.id %>">
+                <button class="bn54 yellow">
+                  <span class="bn54span"><i class='bx bxs-pencil'></i></span>
+                </button>
+              </form>
+
+              <form method="POST" action="/deletarpedido/<%= pedido.id %>">
+                <button class="bn54 red">
+                  <span class="bn54span"><i class="fas fa-trash"></i></span>
+                </button>
+              </form>
+
+            </div>
+
+          </div>
+          <% }); %>
+      </section>
+
+
+  </body>
+
+  <%- include('partials/footer.ejs') %>

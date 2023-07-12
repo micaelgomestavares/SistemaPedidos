@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body {
+  font-family: "DM Sans", sans-serif !important;
+  line-height: 1.5;
+  background-color: #191a19;
+  color: white;
+}
+
+.container {
+  height: 500px;
+  max-height: 500px;
+}
+
+.container .card {
+  margin: 2rem auto;
+  color: white;
+  margin-top: 5px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 425px;
+  background: #303030;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+}
+
+.container .card .card-form {
+  padding: 0.5rem 0rem 0;
+}
+
+.container .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.container .input + .input {
+  margin-top: 1.5rem;
+}
+
+.container .input .input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #949494;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+}
+
+.container .input .input-field:focus, .container .input .input-field:valid {
+  outline: 0;
+  border-bottom-color: #6658d3;
+}
+
+.container .input .input-field:focus + .input-label, .container .input .input-field:valid + .input-label {
+  color: white;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.container .input .input-label {
+  color: #868686;
+  position: absolute;
+  top: 1.5rem;
+  font-weight: 800;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  width: 100%;
+  font-weight: 500;
+  background-color: #6658d3;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+}
+
+.action-button:focus {
+  outline: 0;
+}
+
+.action-button:hover {
+  cursor: pointer;
+}
+
+select option {
+  color: black;
+}
+
+select option:hover {
+  cursor: pointer;
+}
+
+.input-field {
+  color: white;
+}
+
+.searchEngine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+  .card {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #f1f3fb !important;
+  }
+  body {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .searchEngine {
+    margin-left: 78px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

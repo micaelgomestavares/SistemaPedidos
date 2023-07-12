@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body {
+  font-family: "DM Sans", sans-serif !important;
+  line-height: 1.5;
+  background-color: #191a19;
+  color: white;
+}
+
+.container {
+  height: 500px;
+  max-height: 500px;
+
+  .card {
+    margin: 2rem auto;
+    color: white;
+    margin-top: 5px !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 425px;
+    background: hsl(0, 0%, 19%);
+    border-radius: 10px;
+    box-shadow: 0 0 5px -2px hsla(0, 0%, 0%, 0.1);
+    padding: 0.75rem;
+
+    .card-form {
+      padding: 0.5rem 0rem 0;
+    }
+  }
+
+  .input {
+    display: flex;
+    color: white;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+    & + .input {
+      margin-top: 1.5rem;
+    }
+
+    .input-field {
+      border: 0;
+      z-index: 1;
+      background-color: transparent;
+      border-bottom: 2px solid rgb(148, 148, 148);
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.25rem 0;
+      &:focus,
+      &:valid {
+        outline: 0;
+        border-bottom-color: #6658d3;
+        & + .input-label {
+          color: white;
+          transform: translateY(-1.5rem);
+        }
+      }
+    }
+
+    .input-label {
+      color: rgb(134, 134, 134);
+      position: absolute;
+      top: 1.5rem;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+  }
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  width: 100%;
+  font-weight: 500;
+  background-color: #6658d3;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+select option {
+  color: rgb(0, 0, 0);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.input-field {
+  color: white;
+}
+
+.searchEngine {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+  .card {
+    box-shadow: none;
+    background-color: #f1f3fb !important;
+  }
+  body {
+    max-height: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .searchEngine {
+    margin-left: 78px;
+  }
+}

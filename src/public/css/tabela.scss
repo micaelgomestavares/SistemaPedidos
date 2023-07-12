@@ -1,0 +1,36 @@
+.tabela {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+
+.table {
+  max-width: 1800px !important;
+}
+
+td {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn {
+  padding: 15px !important;
+}
+
+@media (max-width: 1366px) {
+  .table {
+    max-width: 1100px !important;
+  }
+  .tabela {
+    margin-left: 0px !important;
+  }
+  .dataTables_wrapper {
+    position: relative;
+    clear: both;
+    margin-left: 100px !important;
+  }
+}
