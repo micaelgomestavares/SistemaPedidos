@@ -15,11 +15,11 @@ Este sistema foi criado com o intuito de auxiliar no processo de retirada de ped
 
 ## Screenshots
 
-![Tela de pedidos](https://imgur.com/5hOMWFv)
+![Tela de pedidos](https://i.imgur.com/5hOMWFv.png)
 
-![Tela verificação do pedido](https://imgur.com/wFjGGxs)
+![Tela verificação do pedido](https://i.imgur.com/wFjGGxs.png)
 
-![Tela de histórico](https://imgur.com/LmsfSTQ)
+![Tela de histórico](https://i.imgur.com/LmsfSTQ.png)
 
 
 
